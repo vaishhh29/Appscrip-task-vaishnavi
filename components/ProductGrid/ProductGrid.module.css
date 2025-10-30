@@ -1,0 +1,150 @@
+.section {
+  min-height: 50vh;
+}
+
+.controlBar {
+  position: sticky;
+  top: 8.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  min-height: 3.5rem;
+}
+
+.leftControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.mobileFilterBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.desktopFilterToggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.itemCount {
+  color: #000000;
+}
+
+.separator {
+  color: #9ca3af;
+  margin: 0 0.25rem;
+}
+
+.filterText {
+  color: #9ca3af;
+}
+
+.mobileItemCount {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.sortSelect {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+  min-width: 140px;
+  text-align: right;
+}
+
+.sortSelect:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.productsMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .controlBar {
+    top: 7.5rem;
+  }
+
+  .controls {
+    padding: 1.5rem 0;
+  }
+
+  .mobileFilterBtn {
+    display: none;
+  }
+
+  .desktopFilterToggle {
+    display: flex;
+  }
+
+  .mobileItemCount {
+    display: none;
+  }
+
+  .sortSelect {
+    min-width: 160px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
